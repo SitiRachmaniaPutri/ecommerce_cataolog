@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+:root {
+  --dark-blue: #002772;
+  --pink: #fde2ff;
+  --black: #1e1e1e;
+  --dark-purple: #720060;
+  --light-blue: #d6e6ff;
+  --dark-gray: #3f3f3f;
+  --gray: #dcdcdc;
+  --white: #ffffff;
+}
+
+/* Colors */
+.bg-light-blue {
+  background: linear-gradient(180deg, var(--light-blue) 65%, var(--white) 50%);
+}
+.bg-pink {
+  background: linear-gradient(180deg, var(--pink) 65%, var(--white) 50%);
+}
+.bg-gray {
+  background: linear-gradient(180deg, var(--gray) 65%, var(--white) 50%);
+}
+.bg-white {
+  background-color: var(--white);
+}
+.bg-dark-blue,
+.color-dark-blue {
+  background-color: var(--dark-blue);
+}
+.bg-dark-purple,
+.color-dark-purple {
+  background-color: var(--dark-purple);
+}
+.border-dark-blue {
+  border: 2px solid var(--dark-blue);
+}
+.border-dark-purple {
+  border: 2px solid var(--dark-purple);
+}
+.font-dark-blue {
+  color: var(--dark-blue);
+}
+.font-dark-purple {
+  color: var(--dark-purple);
+}
+
+/* Animation */
+@keyframes animation {
+  0%,
+  100% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+
+/* Loading Skeleton */
+.skeleton-photo {
+  width: 70%;
+  margin-right: 20px;
+  background-color: #dddddd;
+}
+.skeleton-title {
+  width: 100%;
+  height: 25%;
+  background-color: #dddddd;
+}
+.skeleton-details {
+  width: 100%;
+  height: 70%;
+  margin-top: 20px;
+  background-color: #dddddd;
+}
+
+.main {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.image-container-background {
+  position: absolute;
+  z-index: 1;
+  top: -12%;
+  left: 0;
+  width: 100%;
+}
+.image-container-background > img {
+  width: 100%;
+}
+.card {
+  display: flex;
+  position: relative;
+  z-index: 2;
+  width: 80%;
+  height: 70vh;
+  background-color: var(--white);
+  border-radius: 10px;
+  padding: 48px 32px;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+/* Unavailable Product */
+.product-unavailable {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+}
+.product-unavailable > .image-container-background {
+  width: 100%;
+  max-height: 60vh;
+  object-fit: contain;
+}
+.product-unavailable > .product-details {
+  text-align: center;
+  z-index: 2;
+}
+.product-unavailable .button-next {
+  margin: 0px auto;
+  border: 2px solid black;
+  color: black;
+}
+
+/* Product */
+.product-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 30% 65%;
+  gap: 16px;
+  height: 100%;
+}
+.product-thumbnail {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.product-thumbnail > img {
+  width: 80%;
+}
+.product-details {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.product-details .title {
+  font-size: 32px;
+  font-weight: 600;
+}
+.product-details .sub-title {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 14px;
+  font-size: 16px;
+  color: var(--dark-gray);
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--gray);
+}
+.product-details .rating {
+  display: flex;
+  gap: 3px;
+  align-items: center;
+}
+.rating > .circle {
+  display: block;
+  width: 14px;
+  height: 14px;
+  border-radius: 100%;
+}
+.product-details .description {
+  width: 100%;
+  margin-top: 24px;
+  font-size: 18px;
+  color: var(--black);
+}
+.product-details > .bottom {
+  padding-top: 16px;
+  border-top: 1px solid var(--gray);
+}
+.product-details .price {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+/* Button */
+.button {
+  margin-top: 16px;
+  width: 100%;
+  display: flex;
+  gap: 12px;
+}
+.button > .button-buy,
+.button > .button-next {
+  width: 35%;
+  height: 36px;
+  font-size: 16px;
+  border-radius: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+.button > .button-buy {
+  color: var(--white);
+  border: none;
+}
+.button > .button-next {
+  background-color: var(--white);
+}
